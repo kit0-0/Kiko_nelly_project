@@ -1,0 +1,15 @@
+body {
+    background-color: #1e1e1e;
+}
+
+.tec-list {
+}
+
+.list-item {
+    color: #FFFFFF;
+    background-color: #5f5e5e;
+    list-style-type: none;
+    float: left;
+    margin: 12px;
+    padding: 12px;
+}

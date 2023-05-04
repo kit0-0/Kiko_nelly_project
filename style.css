@@ -1,15 +1,66 @@
 body {
-    background-color: #1e1e1e;
-}
-
-.tec-list {
+    background-color: #ac9a9a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .list-item {
-    color: #FFFFFF;
-    background-color: #5f5e5e;
+    color: #0e0d0d;
+    background-color: #c5bdbd;
     list-style-type: none;
     float: left;
+    margin: 22px;
+    padding: 22px;
+    position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.list-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.list-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.list-item:hover::before {
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+}
+
+.icons-container i{
     margin: 12px;
     padding: 12px;
+    
 }
+
+.icons-container i:hover{
+    animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }

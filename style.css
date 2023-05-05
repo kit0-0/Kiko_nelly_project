@@ -6,22 +6,28 @@ body {
     
 }
 
+.tec-list {
+  animation: slideUp 1s ease-in-out;
+}
+
 .list-item {
-    color: #0e0d0d;
-    background-color: #c5bdbd;
-    list-style-type: none;
-    float: left;
-    margin: 22px;
-    padding: 22px;
-    position: relative;
-			overflow: hidden;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #0e0d0d;
+  background-color: #c5bdbd;
+  list-style-type: none;
+  float: left;
+  margin: 22px;
+  padding: 22px;
+  position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .list-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .list-item::before {
@@ -51,7 +57,9 @@ body {
 }
 
 .icons-container i:hover{
-    animation-name: bounce;
+  filter: invert(1);
+  font-size: 40px;
+  animation-name: bounce;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -63,4 +71,16 @@ body {
     50% {
       transform: translateY(-20px);
     }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-200px);
   }
+
+  100% {
+
+    transform: translateY(0);
+  }
+
+}
